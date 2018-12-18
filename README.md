@@ -3,6 +3,7 @@ Solomon's IDA Homework
 - OS: Windows 10 
 - Language: Python 3.7.1
 
+
 ## How to run
 - run ```pip install requirements.txt```
 - run ```python /src/preprocess/generate_charts.py``` to generate relevant charts
@@ -11,4 +12,5 @@ Solomon's IDA Homework
 - run ```python /src/regression/logistic_regression.py``` to test logistic  model
 
 **ratio** : train set's percentage in the data set
+
 **k** : the number of the nearest neighbors in the KNN mode
