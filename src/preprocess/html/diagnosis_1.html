@@ -29,15 +29,15 @@
 </script>
 </head>
 <body>
-    <div id="ec5ebcd5ac204a0c9d9f17dae5da6c22" style="width:1500px;height:400px;"></div>
+    <div id="d4fb58d9422d46a2a11882d6207e65a6" style="width:1500px;height:400px;"></div>
     <script type="text/javascript">
 
-var myChart_ec5ebcd5ac204a0c9d9f17dae5da6c22 = echarts.init(document.getElementById('ec5ebcd5ac204a0c9d9f17dae5da6c22'), 'light', {renderer: 'canvas'});
+var myChart_d4fb58d9422d46a2a11882d6207e65a6 = echarts.init(document.getElementById('d4fb58d9422d46a2a11882d6207e65a6'), 'light', {renderer: 'canvas'});
 
-var option_ec5ebcd5ac204a0c9d9f17dae5da6c22 = {
+var option_d4fb58d9422d46a2a11882d6207e65a6 = {
     "title": [
         {
-            "text": "Race",
+            "text": "First Diagnosis",
             "left": "center",
             "top": "auto",
             "textStyle": {
@@ -68,7 +68,7 @@ var option_ec5ebcd5ac204a0c9d9f17dae5da6c22 = {
             }
         }
     },
-    "series_id": 1066478,
+    "series_id": 6840869,
     "tooltip": {
         "trigger": "item",
         "triggerOn": "mousemove|click",
@@ -84,77 +84,136 @@ var option_ec5ebcd5ac204a0c9d9f17dae5da6c22 = {
     },
     "series": [
         {
-            "type": "pie",
+            "type": "bar",
             "data": [
-                {
-                    "name": "AfricanAmerican",
-                    "value": 18772
-                },
-                {
-                    "name": "Asian",
-                    "value": 628
-                },
-                {
-                    "name": "Caucasian",
-                    "value": 76454
-                },
-                {
-                    "name": "Hispanic",
-                    "value": 2017
-                },
-                {
-                    "name": "Other",
-                    "value": 1472
-                }
+                29730,
+                13976,
+                9399,
+                8661,
+                6925,
+                4935,
+                5003,
+                3133,
+                17581
             ],
-            "radius": [
-                "0%",
-                "75%"
-            ],
-            "center": [
-                "50%",
-                "50%"
-            ],
+            "stack": "stack_6840869",
+            "barCategoryGap": "20%",
             "label": {
                 "normal": {
-                    "show": true,
-                    "position": "right",
+                    "show": false,
+                    "position": "top",
                     "textStyle": {
                         "fontSize": 12
-                    },
-                    "formatter": "{b}: {d}%"
+                    }
                 },
                 "emphasis": {
                     "show": true,
                     "textStyle": {
                         "fontSize": 12
-                    },
-                    "formatter": "{b}: {d}%"
+                    }
                 }
             },
-            "seriesId": 1066478
+            "markPoint": {
+                "data": []
+            },
+            "markLine": {
+                "data": []
+            },
+            "seriesId": 6840869
         }
     ],
     "legend": [
         {
             "data": [
-                "AfricanAmerican",
-                "Asian",
-                "Caucasian",
-                "Hispanic",
-                "Other"
+                ""
             ],
             "selectedMode": "multiple",
             "show": true,
-            "left": "left",
+            "left": "center",
             "top": "top",
-            "orient": "vertical",
+            "orient": "horizontal",
             "textStyle": {
                 "fontSize": 12
             }
         }
     ],
     "animation": true,
+    "xAxis": [
+        {
+            "show": true,
+            "nameLocation": "middle",
+            "nameGap": 25,
+            "nameTextStyle": {
+                "fontSize": 14
+            },
+            "axisTick": {
+                "alignWithLabel": false
+            },
+            "inverse": false,
+            "boundaryGap": true,
+            "type": "category",
+            "splitLine": {
+                "show": false
+            },
+            "axisLine": {
+                "lineStyle": {
+                    "width": 1
+                }
+            },
+            "axisLabel": {
+                "interval": "auto",
+                "rotate": 0,
+                "margin": 8,
+                "textStyle": {
+                    "fontSize": 12
+                }
+            },
+            "data": [
+                "Circulatory",
+                "Respiratory",
+                "Digestive",
+                "Diabetes",
+                "Injury",
+                "Musculoskeletal",
+                "Genitourinary",
+                "Neoplasms",
+                "Other"
+            ]
+        }
+    ],
+    "yAxis": [
+        {
+            "show": true,
+            "nameLocation": "middle",
+            "nameGap": 25,
+            "nameTextStyle": {
+                "fontSize": 14
+            },
+            "axisTick": {
+                "alignWithLabel": false
+            },
+            "inverse": false,
+            "boundaryGap": true,
+            "type": "value",
+            "splitLine": {
+                "show": true
+            },
+            "axisLine": {
+                "lineStyle": {
+                    "width": 1
+                }
+            },
+            "axisLabel": {
+                "interval": "auto",
+                "formatter": "{value} ",
+                "rotate": 0,
+                "margin": 8,
+                "textStyle": {
+                    "fontSize": 12
+                }
+            }
+        }
+    ],
     "color": [
         "#c23531",
         "#2f4554",
@@ -183,7 +242,7 @@ var option_ec5ebcd5ac204a0c9d9f17dae5da6c22 = {
         "#f6f5ec"
     ]
 };
-myChart_ec5ebcd5ac204a0c9d9f17dae5da6c22.setOption(option_ec5ebcd5ac204a0c9d9f17dae5da6c22);
+myChart_d4fb58d9422d46a2a11882d6207e65a6.setOption(option_d4fb58d9422d46a2a11882d6207e65a6);
 
 </script>
 </body>

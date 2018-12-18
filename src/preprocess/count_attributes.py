@@ -24,34 +24,34 @@ def read_csv(records):
 
 # age
 def count_age(records):
-    print ("age")
+    print("age")
     records.sort(key = itemgetter(4))
     groups = groupby(records, itemgetter(4))
     for key, group in groups:
-        print (key, len(list(group)))
-    print ("------")
+        print(key, len(list(group)))
+    print("------")
 
 # race
 def count_race(records):
-    print ("race")
+    print("race")
     records.sort(key = itemgetter(2))
     groups = groupby(records, itemgetter(2))
     for key, group in groups:
-        print (key, len(list(group)))
-    print ("------")
+        print(key, len(list(group)))
+    print("------")
 
 # gender
 def count_gender(records):
-    print ("gender")
+    print("gender")
     records.sort(key = itemgetter(3))
     groups = groupby(records, itemgetter(3))
     for key, group in groups:
-        print (key, len(list(group)))
-    print ("------")
+        print(key, len(list(group)))
+    print("------")
 
 # weight(based on different races and ages)
 def count_weight(records):
-    print ("weight(based on different races and ages)")
+    print("weight(based on different races and ages)")
     gender_list = ["Male", "Female"]
     age_list = ["[0-10)", "[10-20)", "[20-30)", "[30-40)", "[40-50)",
                 "[50-60)", "[60-70)", "[70-80)", "[80-90)", "[90-100)"]
@@ -61,13 +61,13 @@ def count_weight(records):
         for age in age_list:
             for weight in weight_list:
                 tmp_list = list(filter(lambda x:(x[3] == gender and x[4] == age and x[5] == weight), records))
-                print (gender + " " + age + " " + weight + ":")
-                print (len(tmp_list))
-    print ("------")
+                print(gender + " " + age + " " + weight + ":")
+                print(len(tmp_list))
+    print("------")
 
 # admission type
 def count_admission_type(records):
-    print ("admission type")
+    print("admission type")
     dictionary = {"1": "Emergency", "2": "Urgent",
                   "3": "Elective", "4": "Newborn",
                   "5": "Not Available", "6": "NULL",
@@ -75,12 +75,12 @@ def count_admission_type(records):
     records.sort(key = itemgetter(5))
     groups = groupby(records, itemgetter(5))
     for key, group in groups:
-        print (dictionary[key], len(list(group)))
-    print ("------")
+        print(dictionary[key], len(list(group)))
+    print("------")
 
 # diagnosis 1
 def count_diagnosis(records):
-    print ("diagnosis 1")
+    print("diagnosis 1")
     circulatory_num = 0
     respiratory_num = 0
     digestive_num = 0
@@ -90,8 +90,8 @@ def count_diagnosis(records):
     genitourinary_num = 0
     neoplasms_num = 0
     other_num = 0
-    records.sort(key = itemgetter(17))
-    groups = groupby(records, itemgetter(17))
+    records.sort(key = itemgetter(15))
+    groups = groupby(records, itemgetter(15))
     for key, group in groups:
         if "390" <= key <= "459" or key == "785":
             circulatory_num += len(list(group))
@@ -112,25 +112,25 @@ def count_diagnosis(records):
             neoplasms_num += len(list(group))
         else:
             other_num += len(list(group)) 
-    print ("Circulatory", circulatory_num)
-    print ("Respiratory", respiratory_num)
-    print ("Digestive", digestive_num)
-    print ("Diabetes", diabetes_num)
-    print ("Injury", injury_num)
-    print ("Musculoskeletal", musculoskeletal_num)
-    print ("Genitourinary", genitourinary_num)
-    print ("Neoplasms", neoplasms_num)
-    print ("Other", other_num)
-    print ("------")
+    print("Circulatory", circulatory_num)
+    print("Respiratory", respiratory_num)
+    print("Digestive", digestive_num)
+    print("Diabetes", diabetes_num)
+    print("Injury", injury_num)
+    print("Musculoskeletal", musculoskeletal_num)
+    print("Genitourinary", genitourinary_num)
+    print("Neoplasms", neoplasms_num)
+    print("Other", other_num)
+    print("------")
 
 # discharge disposition
 def count_discharge_disposition(records):
-    print ("discharge disposition")
+    print("discharge disposition")
     records.sort(key = itemgetter(6))
     groups = groupby(records, itemgetter(6))
     for key, group in groups:
-        print (key, len(list(group)))
-    print ("------")
+        print(key, len(list(group)))
+    print("------")
 
 if __name__ == '__main__':
     main()

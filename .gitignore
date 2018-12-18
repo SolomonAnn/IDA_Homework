@@ -1,0 +1,5 @@
+.vscode
+*.pptx
+tmp.csv
+regression.csv
+*.tex

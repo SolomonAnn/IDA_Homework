@@ -1,0 +1,4 @@
+pyecharts
+sklearn
+numpy
+pandas

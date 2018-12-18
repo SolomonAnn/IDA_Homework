@@ -29,15 +29,15 @@
 </script>
 </head>
 <body>
-    <div id="73f9b7eb06604d7e819628b74dd179b3" style="width:1500px;height:400px;"></div>
+    <div id="7d6a621bad5446bebbf373e722c9f9d7" style="width:1500px;height:400px;"></div>
     <script type="text/javascript">
 
-var myChart_73f9b7eb06604d7e819628b74dd179b3 = echarts.init(document.getElementById('73f9b7eb06604d7e819628b74dd179b3'), 'light', {renderer: 'canvas'});
+var myChart_7d6a621bad5446bebbf373e722c9f9d7 = echarts.init(document.getElementById('7d6a621bad5446bebbf373e722c9f9d7'), 'light', {renderer: 'canvas'});
 
-var option_73f9b7eb06604d7e819628b74dd179b3 = {
+var option_7d6a621bad5446bebbf373e722c9f9d7 = {
     "title": [
         {
-            "text": "Discharge Disposition",
+            "text": "Race",
             "left": "center",
             "top": "auto",
             "textStyle": {
@@ -68,7 +68,7 @@ var option_73f9b7eb06604d7e819628b74dd179b3 = {
             }
         }
     },
-    "series_id": 1035900,
+    "series_id": 880258,
     "tooltip": {
         "trigger": "item",
         "triggerOn": "mousemove|click",
@@ -84,160 +84,77 @@ var option_73f9b7eb06604d7e819628b74dd179b3 = {
     },
     "series": [
         {
-            "type": "bar",
+            "type": "pie",
             "data": [
-                60234,
-                2128,
-                13954,
-                815,
-                1184,
-                12902,
-                623,
-                108,
-                21,
-                6,
-                3,
-                63,
-                11,
-                14,
-                3691,
-                1993,
-                412,
-                48,
-                989,
-                5,
-                139
+                {
+                    "name": "AfricanAmerican",
+                    "value": 18772
+                },
+                {
+                    "name": "Asian",
+                    "value": 628
+                },
+                {
+                    "name": "Caucasian",
+                    "value": 76454
+                },
+                {
+                    "name": "Hispanic",
+                    "value": 2017
+                },
+                {
+                    "name": "Other",
+                    "value": 1472
+                }
             ],
-            "stack": "stack_1035900",
-            "barCategoryGap": "20%",
+            "radius": [
+                "0%",
+                "75%"
+            ],
+            "center": [
+                "50%",
+                "50%"
+            ],
             "label": {
                 "normal": {
-                    "show": false,
-                    "position": "top",
+                    "show": true,
+                    "position": "right",
                     "textStyle": {
                         "fontSize": 12
-                    }
+                    },
+                    "formatter": "{b}: {d}%"
                 },
                 "emphasis": {
                     "show": true,
                     "textStyle": {
                         "fontSize": 12
-                    }
+                    },
+                    "formatter": "{b}: {d}%"
                 }
             },
-            "markPoint": {
-                "data": []
-            },
-            "markLine": {
-                "data": []
-            },
-            "seriesId": 1035900
+            "seriesId": 880258
         }
     ],
     "legend": [
         {
             "data": [
-                ""
+                "AfricanAmerican",
+                "Asian",
+                "Caucasian",
+                "Hispanic",
+                "Other"
             ],
             "selectedMode": "multiple",
             "show": true,
-            "left": "center",
+            "left": "left",
             "top": "top",
-            "orient": "horizontal",
+            "orient": "vertical",
             "textStyle": {
                 "fontSize": 12
             }
         }
     ],
     "animation": true,
-    "xAxis": [
-        {
-            "show": true,
-            "nameLocation": "middle",
-            "nameGap": 25,
-            "nameTextStyle": {
-                "fontSize": 14
-            },
-            "axisTick": {
-                "alignWithLabel": false
-            },
-            "inverse": false,
-            "boundaryGap": true,
-            "type": "category",
-            "splitLine": {
-                "show": false
-            },
-            "axisLine": {
-                "lineStyle": {
-                    "width": 1
-                }
-            },
-            "axisLabel": {
-                "interval": "auto",
-                "rotate": 0,
-                "margin": 8,
-                "textStyle": {
-                    "fontSize": 12
-                }
-            },
-            "data": [
-                "1",
-                "2",
-                "3",
-                "4",
-                "5",
-                "6",
-                "7",
-                "8",
-                "9",
-                "10",
-                "12",
-                "15",
-                "16",
-                "17",
-                "18",
-                "22",
-                "23",
-                "24",
-                "25",
-                "27",
-                "28"
-            ]
-        }
-    ],
-    "yAxis": [
-        {
-            "show": true,
-            "nameLocation": "middle",
-            "nameGap": 25,
-            "nameTextStyle": {
-                "fontSize": 14
-            },
-            "axisTick": {
-                "alignWithLabel": false
-            },
-            "inverse": false,
-            "boundaryGap": true,
-            "type": "value",
-            "splitLine": {
-                "show": true
-            },
-            "axisLine": {
-                "lineStyle": {
-                    "width": 1
-                }
-            },
-            "axisLabel": {
-                "interval": "auto",
-                "formatter": "{value} ",
-                "rotate": 0,
-                "margin": 8,
-                "textStyle": {
-                    "fontSize": 12
-                }
-            }
-        }
-    ],
     "color": [
         "#c23531",
         "#2f4554",
@@ -266,7 +183,7 @@ var option_73f9b7eb06604d7e819628b74dd179b3 = {
         "#f6f5ec"
     ]
 };
-myChart_73f9b7eb06604d7e819628b74dd179b3.setOption(option_73f9b7eb06604d7e819628b74dd179b3);
+myChart_7d6a621bad5446bebbf373e722c9f9d7.setOption(option_7d6a621bad5446bebbf373e722c9f9d7);
 
 </script>
 </body>
