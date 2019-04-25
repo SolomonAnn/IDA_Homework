@@ -14,9 +14,9 @@ def main(argv):
         start = time.time()
         header = read_csv(filename, records)
         (trainset, testset) = split_dataset(records, ratio)
-        seperation = seperate_trainset(trainset)
-        counter = standardize_attributes(seperation)
-        probabilities = calculate_probabilities(seperation, counter)
+        separation = separate_trainset(trainset)
+        counter = standardize_attributes(separation)
+        probabilities = calculate_probabilities(separation, counter)
         predict_testset(testset, probabilities)
         end = time.time()
         print("Cost: {0} s".format(end - start))
@@ -54,27 +54,27 @@ def split_dataset(dataset, ratio):
     print("**********")
     return (trainset, testset)
 
-# seperate the trainset according to 'readmitted'
-def seperate_trainset(dataset):
-    seperation = {}
+# separate the trainset according to 'readmitted'
+def separate_trainset(dataset):
+    separation = {}
     for record in dataset:
-        if record[-1] not in seperation:
-            seperation[record[-1]] = []
-        seperation[record[-1]].append(record)
-    print("Seperate the Train Set Successfully!")
-    for key in seperation:
-        print("{0}: {1} rows".format(key, len(seperation[key])))
+        if record[-1] not in separation:
+            separation[record[-1]] = []
+        separation[record[-1]].append(record)
+    print("Separate the Train Set Successfully!")
+    for key in separation:
+        print("{0}: {1} rows".format(key, len(separation[key])))
     print("**********")
-    return seperation  
+    return separation  
 
 # standardize values of attributes
-def standardize_attributes(seperation):
+def standardize_attributes(separation):
     # standardize discrete attributes
     counter = {}
-    for key in seperation:
+    for key in separation:
         for index in set(range(2, 8)) | set(range(17, 44)):
             attr_map = {}
-            for item in seperation[key]:
+            for item in separation[key]:
                 if item[index] not in attr_map:
                     attr_map[item[index]] = 0
                 attr_map[item[index]] += 1
@@ -82,9 +82,9 @@ def standardize_attributes(seperation):
                 counter[key] = []
             counter[key].append(attr_map)
     # standardize 'diag_1'
-    for key in seperation:
+    for key in separation:
         attr_map = {}
-        for item in seperation[key]:
+        for item in separation[key]:
             if "390" <= item[15] <= "459" or item[15] == "785":
                 if "circulatory" not in attr_map:
                     attr_map["circulatory"] = 0
